@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0000ff',
+                        secondary: '#808080'
+                    },
+                    spacing: {
+                        '1': '3rem',
+                        '2': '4rem',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif']
+                    },
+                    fontSize: {
+                        'xl': '4rem'
+                    }
+                },
+            },
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1 class="text-4xl text-center underline text-secondary m-2">
+        Proviamo Tailwind
+    </h1>
+    <p class="text-xl text-center font-bold text-primary p-2 font-serif">Lorem ipsum dolor sit.</p>
+    <p class="text-center text-primary">Lorem ipsum dolor sit.</p>
+</body>
+
+</html>
