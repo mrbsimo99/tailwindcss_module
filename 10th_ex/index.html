@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: "	#008b8b",
+              secondary: "#00008b",
+              tertiary: "#6495ed",
+              titleColor: "#f56446",
+              textColor: "#7966c2",
+              lightTextColor: "#9289c0"
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <div class="dark:bg-primary dark:text-color-titleColor p-4">
+      <p>Questo paragrafo cambia colore quando attivi la dark mode</p>
+    </div>
+
+    <div class="p-4">
+      <button id="darkModeToggle" class="border px-4 py-1 cursor-pointer">Dark Mode: <span id="darkModeStatus">Inactive</span></button>
+    </div>
+
+    <script>
+      const toggleDarkMode = () => {
+        document.body.classList.toggle('dark');
+        document.querySelector("#darkModeStatus").innerHTML = document.body.classList.contains("dark") ? "Active" : "Inactive";
+       
+      };
+       document.querySelector("#darkModeToggle").addEventListener('click', toggleDarkMode);
+    </script>
+  </body>
+</html>
