@@ -12,7 +12,10 @@
             colors: {
               primary: "	#008b8b",
               secondary: "#00008b",
-              tertiary: "#6495ed"
+              tertiary: "#6495ed",
+              titleColor: "#f56446",
+              textColor: "#7966c2",
+              lightTextColor: "#9289c0"
             },
           },
         },
@@ -20,6 +23,11 @@
     </script>
   </head>
   <body class="bg-blue-100">
+    <div class="text-center">
+      <h1 class="text-titleColor text-6xl mb-4">Titolo</h1>
+      <p class="text-textColor text-4xl mb-4">Paragrafo</p>
+      <a href="#" class="text-lightTextColor cursor-pointer text-3xl">Link</a>
+    </div>
     <div class="container flex flex-row justify-center m-20">
       <div class="w-64 h-64 bg-primary me-2 mb-2 rounded-lg shadow-md flex items-center justify-center">
         <button type="button" class="bg-secondary text-white px-2 py-1 me-2 mb-2 rounded-lg">1</button>
