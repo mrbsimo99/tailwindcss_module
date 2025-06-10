@@ -1,31 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        darkMode: 'class',
-        theme: {
-          extend: {
-            colors: {
-              primary: "	#008b8b",
-              secondary: "#00008b",
-              tertiary: "#6495ed",
-              titleColor: "#f56446",
-              textColor: "#7966c2",
-              lightTextColor: "#9289c0"
-            },
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: "	#008b8b",
+            secondary: "#00008b",
+            tertiary: "#6495ed",
+            titleColor: "#f56446",
+            textColor: "#7966c2",
+            lightTextColor: "#9289c0"
           },
         },
-      };
-    </script>
-  </head>
-  <body>
-    <div class="dark:bg-primary dark:text-color-titleColor p-4">
-      <p>Questo paragrafo cambia colore quando attivi la dark mode</p>
+      },
+    };
+  </script>
+</head>
+
+<body>
+  <div class="wrapper dark:bg-gray-300">
+    <div class="bg-tertiary dark:bg-primary text-white dark:text-color-titleColor p-4">
+      <p>Questo paragrafo cambia colore quando attivi la dark mode dal dispositivo</p>
+    </div>
+    <div class="container ml-4">
+      <h2 class="text-titleColor dark:text-darkTitle">Title</h2>
+      <p class="text-lightTextColor dark:text-titleColor">Lorem ipsum dolor sit.</p>
+      <p class="text-lightTextColor dark:text-titleColor">Lorem ipsum dolor sit.</p>
+      <ul>
+        <li class="text-lightTextColor dark:text-titleColor">li1</li>
+        <li class="text-lightTextColor dark:text-titleColor">li2</li>
+        <li class="text-lightTextColor dark:text-titleColor">li3</li>
+        <li class="text-lightTextColor dark:text-titleColor">li4</li>
+      </ul>
     </div>
 
     <div class="p-4">
@@ -37,7 +51,9 @@
         document.body.classList.toggle('dark');
         document.querySelector("#darkModeStatus").innerHTML = document.body.classList.contains("dark") ? "🌞" : "🌙";
       };
-       document.querySelector("#darkModeToggle").addEventListener('click', toggleDarkMode);
+      document.querySelector("#darkModeToggle").addEventListener('click', toggleDarkMode);
     </script>
-  </body>
+  </div>
+</body>
+
 </html>
