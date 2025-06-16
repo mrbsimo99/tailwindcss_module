@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#008b8b",
+                        secondary: "#00008b",
+                    }
+                }
+            }
+        } 
+    </script>
+    <style type="text/tailwindcss">
+        @layer components {
+            .btn {
+                border: 1px solid black;
+                padding: 10px 20px;
+                border-radius: 4px;
+            }
+
+            .btn-primary {
+                @apply btn text-white bg-primary hover:opacity-90 active:border-2;
+            }
+
+               .btn-secondary {
+                @apply btn text-white bg-secondary hover:opacity-90 active:border-2;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="p-4">
+    <button class="btn">01</button>
+    <button class="btn-primary">02</button>
+    <button class="btn-secondary">03</button>
+</div>
+</body>
+
+</html>
