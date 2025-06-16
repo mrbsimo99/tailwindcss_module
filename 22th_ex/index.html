@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Griglia</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <div class="flex flex-wrap justify-center">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
         <div class="bg-primary p-4 text-white text-center border">Primo</div>
         <div class="bg-secondary p-4 text-white text-center border">Secondo</div>
         <div class="bg-sky-500 p-4 text-white text-center border">Terzo</div>
