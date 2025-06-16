@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#008b8b",
+                        secondary: "#00008b",
+                    }
+                }
+            }
+        } 
+    </script>
+    <style type="text/tailwindcss">
+        @layer components {
+            .btn {
+                border: 0.5px solid #00008b;
+                padding: 10px 20px;
+                border-radius: 4px;
+            }
+            
+
+            .btn-primary {
+                @apply btn text-white bg-primary hover:opacity-90;
+      }
+
+         .btn-secondary {
+                @apply btn text-white bg-secondary hover:opacity-90;
+            }
+
+      .card {
+        @apply p-4 rounded-lg bg-primary border inline-block;
+      }
+        }
+    </style>
+</head>
+
+<body>
+<div class="p-4 ml-4">
+    <button class="btn-primary">01</button>
+    <div class="p-8">
+        <div class="card">
+            <h2 class="text-white text-center">Card 01</h2>
+            <p class="text-secondary">Lorem ipsum dolor sit.</p>
+        </div>
+    </div>
+</div>
+<div class="p-4 ml-4">
+    <button class="btn-secondary">02</button>
+    <div class="p-8">
+        <div class="card">
+            <h2 class="text-white text-center">Card 02</h2>
+            <p class="text-secondary">Lorem ipsum dolor sit.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
