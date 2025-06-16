@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -13,21 +13,27 @@
                     colors: {
                         primary: "#008b8b",
                         secondary: "#00008b",
-                    }
-                }
-            }
-        } 
+                    },
+                },
+            },
+        };
     </script>
 </head>
 
-<body>
-    <div class="flex flex-wrap justify-center">
-        <div class="bg-primary p-4 text-white text-center border">Primo</div>
-        <div class="bg-secondary p-4 text-white text-center border">Secondo</div>
-        <div class="bg-sky-500 p-4 text-white text-center border">Terzo</div>
-        <div class="bg-green-500 p-4 text-white text-center border">Quarto</div>
-        <div class="bg-green-300 p-4 text-white text-center border">Quinto</div>
-        <div class="bg-green-800 p-4 text-white text-center border">Sesto</div>
+<body class="bg-gray-100 p-6 text-gray-900">
+
+    <h1 class="text-4xl font-bold text-sky-500 mb-4">Condizionali</h1>
+    <div class="block md:hidden bg-blue-300 text-secondary p-4 rounded mb-4">
+        <p class="text-2xl font-bold">Questo lo vedi solo su smartphone.</p>
+    </div>
+    <div class="hidden md:block bg-blue-100 text-primary p-4 rounded mb-4">
+        <p class="text-2xl font-bold">Questo lo vedi solo su schermi medio-grandi.</p>
+    </div>
+    <div class="hidden lg:block bg-green-700 text-white p-4 rounded mb-4">
+        <p class="text-2xl font-bold">Questo lo vedi solo su desktop.</p>
+    </div>
+    <div class="bg-green-300 p-4 text-primary rounded">
+        <p class="text-2xl font-bold">Questo lo vedi sempre.</p>
     </div>
 </body>
 
